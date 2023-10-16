@@ -1,0 +1,2 @@
+quickumls==1.4.1
+unqlite==0.9.6
