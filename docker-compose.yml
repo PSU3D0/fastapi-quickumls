@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: umls-server:latest
+    command: "uvicorn main:app --host 0.0.0.0 --port 4645 --reload"
+    ports:
+      - 4645:4645
+    volumes:
+      - ./src:/app/code
